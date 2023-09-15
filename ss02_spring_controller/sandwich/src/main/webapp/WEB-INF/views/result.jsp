@@ -13,12 +13,12 @@
 </head>
 <body>
 
-<h2>Menu today we have:</h2>
+<h2>This Sandwich include:</h2>
 <c:forEach var="list" items="${condiment}">
    <h3 style="color: cornflowerblue">${list}</h3><br>
 </c:forEach>
 <br>
-<button style="text-decoration: none;color: darkslategrey" href="index.jsp">Back to menu</button>
+<%--<button href="/index.jsp">Back to menu</button>--%>
 </form>
 </body>
 </html>

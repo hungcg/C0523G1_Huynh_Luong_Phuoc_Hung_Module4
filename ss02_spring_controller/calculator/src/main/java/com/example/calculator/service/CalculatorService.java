@@ -4,24 +4,23 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService implements ICalculatorService {
-    double result;
+
 
     @Override
-    public double calculator(double num1, double num2, String calculate) {
+    public double calculator(double number1, double number2, String calculate) {
+        double result = 0;
         switch (calculate) {
             case "+":
-                result = num1 + num2;
+                result = number1 + number2;
                 break;
             case "-":
-                result = num1 - num2;
+                result = number1 - number2;
                 break;
             case "*":
-                result = num1 * num2;
+                result = number1 * number2;
                 break;
             case "/":
-                result = num1 / num2;
-                break;
-
+                result = number1 / number2;
         }
         return result;
     }
