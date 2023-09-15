@@ -11,9 +11,9 @@
     <title>Ứng dụng từ điển</title>
 </head>
 <body>
-<form method="post" action="home">
-    <input type="text" name = "english">
-    <input type="submit" value="translate">
+<form method="post" action="translate">
+    <input type="text" value="${english}" name = "english">
+    <input type="submit">
 </form>
 <h1>${vietnamese!=null?vietnamese:message}</h1>
 

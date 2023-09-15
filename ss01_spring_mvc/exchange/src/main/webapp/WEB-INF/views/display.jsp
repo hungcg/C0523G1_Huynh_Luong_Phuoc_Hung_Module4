@@ -11,10 +11,10 @@
     <title>Exchange Money</title>
 </head>
 <body>
-<form action="/exchange">
+<form action="exchange" method="post">
     <h3>Input USD</h3><br>
 
-    <input type="text" value="0" name="usd" placeholder="input USD">
+    <input type="number" value="0" name="usd" placeholder="input USD">
     <input type="submit" value="exchange">
 </form>
 <h2>VND = ${result}</h2>

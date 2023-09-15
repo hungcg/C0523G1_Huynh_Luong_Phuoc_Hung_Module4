@@ -1,6 +1,6 @@
 package com.example.dictionary.controller;
 
-import com.example.dictionary.service.DictionaryService;
+import com.example.dictionary.service.IDictionaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,22 +14,24 @@ import java.util.Map;
 public class DictionaryController {
 
     @Autowired
-    private DictionaryService dictionaryService;
+    private IDictionaryService dictionaryService;
 
-    @GetMapping("home")
-    public String home() {
-        return "home";
+    @GetMapping("")
+    public String displayTranslate() {
+        return "display";
     }
 
-    @PostMapping("home")
-    public String translate(@RequestParam String english, Model model) {
+    @PostMapping("translate")
+    public String translateWord(@RequestParam String english, Model model) {
+        model.addAttribute("english", english);
         for (Map.Entry<String, String> entry : dictionaryService.mapDictionary().entrySet()) {
             if (entry.getKey().toLowerCase().equals(english.toLowerCase())) {
-                model.addAttribute("vietnamese",entry.getValue());
-            } else
+                model.addAttribute("vietnamese", entry.getValue());
+            } else {
                 model.addAttribute("message", "not found!!!");
+            }
         }
-        return "home";
+        return "display";
     }
 }
 
