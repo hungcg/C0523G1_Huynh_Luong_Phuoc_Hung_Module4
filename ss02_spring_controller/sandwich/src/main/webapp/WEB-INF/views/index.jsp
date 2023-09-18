@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/save">
+<form action="/sandwich/save">
 
     <lable>Lettuce</lable>
     <input type="checkbox" name="condiment" value="lettuce">
