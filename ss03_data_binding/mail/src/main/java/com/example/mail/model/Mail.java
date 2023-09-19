@@ -1,20 +1,30 @@
 package com.example.mail.model;
 
 public class Mail {
+    private int id;
 
     private String language;
     private int pageSize;
     private String signature;
     private boolean spamFilter;
 
-    public Mail(){
+    public Mail() {
     }
 
-    public Mail(String language, int pageSize, String signature, boolean spamFilter) {
+    public Mail(int id, String language, int pageSize, String signature, boolean spamFilter) {
+        this.id = id;
         this.language = language;
         this.pageSize = pageSize;
         this.signature = signature;
         this.spamFilter = spamFilter;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLanguage() {

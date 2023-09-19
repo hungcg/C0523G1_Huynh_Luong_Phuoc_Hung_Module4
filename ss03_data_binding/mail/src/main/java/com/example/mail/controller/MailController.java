@@ -17,7 +17,7 @@ public class MailController {
     private IMailService mailService;
 
     @GetMapping("")
-    public String saveMail(Model model) {
+    public String settingMail(Model model) {
         model.addAttribute("mail", new Mail());
         model.addAttribute("pageSizeList", mailService.pageSizeList());
         model.addAttribute("languageList", mailService.languageList());
@@ -26,8 +26,8 @@ public class MailController {
 
     @GetMapping("result")
     public String display(Model model) {
-        model.addAttribute("mail", mailService.checkMail());
-        return "/result";
+        model.addAttribute("mailSettingList", mailService.showAll());
+        return "result";
     }
 
     @PostMapping("save")

@@ -5,13 +5,11 @@ import com.example.mail.model.Mail;
 import java.util.List;
 
 public interface IMailRepository {
+    public List<Mail> showAll();
     void mailSetting(Mail mail);
-
-    Mail checkMail();
+    public Mail findById(int id);
 
     List<Integer> pageSizeList();
 
     List<String> languageList();
-
-
 }

@@ -13,14 +13,19 @@ public class MailService implements IMailService {
     private IMailRepository mailRepository;
 
     @Override
+    public List<Mail> showAll() {
+        return mailRepository.showAll();
+    }
+
+    @Override
     public void mailSetting(Mail mail) {
         mailRepository.mailSetting(mail);
 
     }
 
     @Override
-    public Mail checkMail() {
-        return mailRepository.checkMail();
+    public Mail findById(int id) {
+        return mailRepository.findById(id);
     }
 
     @Override
