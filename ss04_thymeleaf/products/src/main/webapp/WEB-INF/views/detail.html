@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/product}" style="text-decoration: none">
+        Back to customer list
+    </a>
+</p>
+<table style="margin: auto; border-collapse: collapse" border="1">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Supplier</th>
+    </tr>
+    <tr>
+        <td th:text="${product.getName()}"></td>
+        <td th:text="${product.getPrice()}"></td>
+        <td th:text="${product.getDescription()}"></td>
+        <td th:text="${product.getSupplier()}"></td>
+    </tr>
+</table>
+</body>
+</html>
