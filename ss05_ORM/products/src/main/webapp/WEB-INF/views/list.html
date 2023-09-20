@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    a{
+      text-decoration: none;
+      color: darkgoldenrod;
+    }
+  </style>
+</head>
+<body>
+<span th:if="${productList.size()!=0}"><a style="text-decoration: none" href="/product/create" >Add new Product</a></span>
+<h2><center>Product List</center></h2>
+<table border="1" style="border-collapse: collapse;margin: auto" >
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Detail</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr th:each="product,status:${productList}">
+    <td hidden="hidden" th:text="${product.id}"></td>
+    <td th:text="${status.count}"></td>
+    <td th:text="${product.name}"></td>
+    <td th:text="${product.price}"></td>
+    <td><a th:href="@{/product/{id}/formDetail(id=${product.getId()})}">Detail</a></td>
+    <td><a th:href="@{/product/{id}/formUpdate(id=${product.getId()})}">Edit</a></td>
+    <td><a th:href="@{/product/{id}/delete(id=${product.getId()})}">Delete</a></td>
+  </tr>
+</table>
+<center><p style="color: indianred" th:if="${message}" th:text="${message}" /></center>
+
+</body>
+</html>
