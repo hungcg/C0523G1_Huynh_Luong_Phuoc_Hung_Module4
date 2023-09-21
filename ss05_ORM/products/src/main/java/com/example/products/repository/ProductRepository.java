@@ -21,28 +21,44 @@ public class ProductRepository implements IProductRepository {
         return query.getResultList();
     }
 
-    @Transactional
+   @Transactional
     @Override
-    public void add(Product product) {
-        entityManager.persist(product);
+    public boolean add(Product product) {
+        try {
+            entityManager.persist(product);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+
     }
 
     @Transactional
     @Override
-    public void update(int id, Product product) {
-        Product productUpdate = findById(id);
-        productUpdate.setName(product.getName());
-        productUpdate.setDescription(product.getDescription());
-        productUpdate.setPrice(product.getPrice());
-        productUpdate.setSupplier(product.getSupplier());
-        entityManager.merge(productUpdate);
+    public boolean update(int id, Product product) {
+        try {
+            Product productUpdate = findById(id);
+            productUpdate.setName(product.getName());
+            productUpdate.setDescription(product.getDescription());
+            productUpdate.setPrice(product.getPrice());
+            productUpdate.setSupplier(product.getSupplier());
+            entityManager.merge(productUpdate);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 
     @Transactional
     @Override
-    public void delete(int id) {
-        Product productDelete = findById(id);
-        entityManager.remove(productDelete);
+    public boolean delete(int id) {
+        try {
+            Product productDelete = findById(id);
+            entityManager.remove(productDelete);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 
     @Override
