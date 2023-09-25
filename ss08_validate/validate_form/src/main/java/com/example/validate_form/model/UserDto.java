@@ -97,17 +97,17 @@ public class UserDto implements Validator {
             errors.rejectValue("firstName", null, "this field cannot empty");
         } else if (userDto.getFirstName().matches("^(?=.{5,45}$)[A-Za-z]{5,45}$")) {
             errors.rejectValue("firstName", null, "the first name invalid,only alphabet" +
-                    " character and min character is 5, max is 45");
+                    " character and character iz 5, max iz 45");
         }
         if (userDto.getFirstName().equals("")) {
             errors.rejectValue("lastName", null, "this field cannot empty");
         } else if (userDto.getFirstName().matches("^(?=.{5,45}$)[A-Za-z]{5,45}$")) {
             errors.rejectValue("lastName", null, "the last name invalid,only alphabet" +
-                    " character and min character is 5, max is 45");
+                    " character and character iz 5, max iz 45");
         }
-        if (userDto.getPhoneNumber().equals("")) {
+        if (userDto.getEmail().equals("")) {
             errors.rejectValue("email", null, "this field cannot empty");
-        } else if (!userDto.getPhoneNumber().matches("^0[0-9]{9}$")) {
+        } else if (!userDto.getEmail().matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
             errors.rejectValue("email", null, "Email invalid, example :example@example.com");
         }
     }

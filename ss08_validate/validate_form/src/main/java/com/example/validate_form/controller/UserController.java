@@ -47,7 +47,7 @@ public class UserController {
             BeanUtils.copyProperties(userDto, user);
             service.create(user);
             redirectAttributes.addFlashAttribute("message", "create success");
-            return "redirect:/";
+            return "redirect:/index";
         }
     }
 }

@@ -6,7 +6,8 @@ import com.example.validate_form.model.UserDto;
 import java.util.List;
 
 public interface IUserService {
-List<User> showAll();
-boolean create(User user);
+    List<User> showAll();
+
+    boolean create(User user);
 
 }
