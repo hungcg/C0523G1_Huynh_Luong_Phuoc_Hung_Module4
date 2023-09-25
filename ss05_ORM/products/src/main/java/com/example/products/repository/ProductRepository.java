@@ -21,7 +21,7 @@ public class ProductRepository implements IProductRepository {
         return query.getResultList();
     }
 
-   @Transactional
+    @Transactional
     @Override
     public boolean add(Product product) {
         try {
@@ -36,14 +36,14 @@ public class ProductRepository implements IProductRepository {
     @Transactional
     @Override
     public boolean update(int id, Product product) {
-        try {
-            Product productUpdate = findById(id);
+        Product productUpdate = findById(id);
+        if (productUpdate != null) {
             productUpdate.setName(product.getName());
             productUpdate.setDescription(product.getDescription());
             productUpdate.setPrice(product.getPrice());
             productUpdate.setSupplier(product.getSupplier());
             entityManager.merge(productUpdate);
-        } catch (Exception e) {
+        } else {
             return false;
         }
         return true;
@@ -52,10 +52,10 @@ public class ProductRepository implements IProductRepository {
     @Transactional
     @Override
     public boolean delete(int id) {
-        try {
-            Product productDelete = findById(id);
+        Product productDelete = findById(id);
+        if (productDelete != null) {
             entityManager.remove(productDelete);
-        } catch (Exception e) {
+        } else {
             return false;
         }
         return true;

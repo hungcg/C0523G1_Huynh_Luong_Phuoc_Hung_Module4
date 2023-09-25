@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e8e1496-7088-4dde-a4fe-c5d9a871d64d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/model/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss02_spring_controller/calculator/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_spring_controller/calculator/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/src/main/java/com/example/sandwich/SandwichController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/src/main/java/com/example/sandwich/SandwichController.java" afterDir="false" />
@@ -18,9 +12,6 @@
       <change beforePath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss04_thymeleaf/products/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_thymeleaf/products/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss04_thymeleaf/products/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_thymeleaf/products/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/products/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/products/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
@@ -42,6 +33,12 @@
       <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/test/java/com/example/blog/BlogApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss06_ss07_spring_data_jpa_repository/blog/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss06_ss07_spring_data_jpa_repository/blog/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/model/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/model/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +250,7 @@
       <workItem from="1695287366082" duration="75000" />
       <workItem from="1695287460909" duration="112000" />
       <workItem from="1695287575595" duration="612000" />
-      <workItem from="1695614554495" duration="1291000" />
+      <workItem from="1695614554495" duration="1597000" />
     </task>
     <servers />
   </component>
