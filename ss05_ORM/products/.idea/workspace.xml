@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e8e1496-7088-4dde-a4fe-c5d9a871d64d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/model/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/repository/IBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/service/IBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/model/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss08_validate/validate_form/src/main/java/com/example/validate_form/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss02_spring_controller/calculator/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_spring_controller/calculator/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/src/main/java/com/example/sandwich/SandwichController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/src/main/java/com/example/sandwich/SandwichController.java" afterDir="false" />
@@ -21,11 +18,30 @@
       <change beforePath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_spring_controller/sandwich/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss04_thymeleaf/products/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_thymeleaf/products/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss04_thymeleaf/products/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss04_thymeleaf/products/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/products/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/products/repository/IProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/products/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/products/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/products/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/products/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/products/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/products/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/products/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/products/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/BlogApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/controller/BlogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/model/Blog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/repository/IBlogRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/service/BlogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/java/com/example/blog/service/IBlogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_spring_data_jpa/blog/src/test/java/com/example/blog/BlogApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss06_ss07_spring_data_jpa_repository/blog/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss06_ss07_spring_data_jpa_repository/blog/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,19 +104,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/C0523G1_Huynh_Luong_Phuoc_Hung_Module4/ss06_spring_data_jpa/blog",
+    "last_opened_file_path": "D:/C0523G1_Huynh_Luong_Phuoc_Hung_Module4/ss05_ORM/products",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.24441524",
+    "spring.configuration.checksum": "2478149364553e8c68a03926a00ead43",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.79">
-    <configuration name="products [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="products [build]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -125,6 +142,11 @@
     <configuration name="Tomcat 9.0.79" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.79" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
+        <artifact name="Gradle : com.example : products-1.0-SNAPSHOT.war (exploded)">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Gradle___com_example___products_1_0_SNAPSHOT_war__exploded_" />
+          </settings>
+        </artifact>
         <artifact name="Gradle : com.example : products-1.0-SNAPSHOT.war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
@@ -205,6 +227,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : products-1.0-SNAPSHOT.war (exploded)" />
           <artifact name="Gradle : com.example : products-1.0-SNAPSHOT.war" />
         </option>
       </method>
@@ -213,11 +236,6 @@
       <item itemvalue="Gradle.products [build]" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.79" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.products [build]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -235,6 +253,7 @@
       <workItem from="1695287366082" duration="75000" />
       <workItem from="1695287460909" duration="112000" />
       <workItem from="1695287575595" duration="612000" />
+      <workItem from="1695614554495" duration="1291000" />
     </task>
     <servers />
   </component>
