@@ -1,7 +1,7 @@
 package com.example.validate_form.controller;
 
 import com.example.validate_form.model.User;
-import com.example.validate_form.model.UserDto;
+import com.example.validate_form.dto.UserDto;
 import com.example.validate_form.service.IUserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;

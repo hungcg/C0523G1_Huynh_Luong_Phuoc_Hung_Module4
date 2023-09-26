@@ -1,12 +1,27 @@
-package com.example.music.model;
+package com.example.music.dto;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
 public class SongDto implements Validator {
     private int id;
+    //    @NotBlank(message = "require not empty")
+//    @Pattern(regexp ="^[A-Z][a-z]*$" )
     private String name;
+    @NotBlank
+    @Min(1)
+    @Max(800)
+    @Pattern(regexp = "^[a-zA-Z0-9\\s]$")
     private String singer;
+    @NotBlank
+    @Min(1)
+    @Max(1000)
+    @Pattern(regexp = "[a-zA-Z,]")
     private String category;
 
     public SongDto(int id, String name, String singer, String category) {
@@ -59,20 +74,10 @@ public class SongDto implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         SongDto songDto = (SongDto) target;
-        if (songDto.getName().equals("")) {
+        if (("").equals(getName())) {
             errors.rejectValue("name", null, "this field cannot empty");
         } else if (!songDto.getName().matches("^[a-zA-Z0-9\\s]{1,800}$")) {
             errors.rejectValue("name", null, "this field cannot contain special character and maximum 800 characters");
-        }
-        if (songDto.getSinger().equals("")) {
-            errors.rejectValue("singer", null, "this field cannot empty");
-        } else if (!songDto.getSinger().matches("^[a-zA-Z0-9\\s]{1,300}$")) {
-            errors.rejectValue("singer", null, "this field cannot contain special character and maximum 300 characters");
-        }
-        if (songDto.getCategory().equals("")) {
-            errors.rejectValue("category", null, "this field cannot empty");
-        } else if (!songDto.getCategory().matches("[a-zA-Z,]{1,1000}")) {
-            errors.rejectValue("category", null, "this field cannot contain special character and maximum 1000 characters");
         }
     }
 }

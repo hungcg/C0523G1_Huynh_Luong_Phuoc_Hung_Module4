@@ -1,17 +1,27 @@
-package com.example.validate_form.model;
+package com.example.validate_form.dto;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import java.util.Date;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 public class UserDto implements Validator {
 
     private int id;
+
+    @NotBlank(message = "require not empty")
+    @Pattern(regexp = "^^(?=.{5,45}$)[A-Za-z]{5,45}$", message = "not match regex")
     private String firstName;
+    @NotBlank(message = "require not empty")
+    @Pattern(regexp = "^(?=.{5,45}$)[A-Za-z]{5,45}$", message = "not match regex")
     private String lastName;
+    @NotBlank(message = "require not empty")
+    @Pattern(regexp = "^0[0-9]{9}$", message = "not match regex")
     private String phoneNumber;
     private int age;
+    @NotBlank(message = "require not empty")
+    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "not match regex")
     private String email;
 
     public UserDto() {
@@ -86,29 +96,6 @@ public class UserDto implements Validator {
             errors.rejectValue("age", null, "this field cannot empty");
         } else if (userDto.getAge() < 18) {
             errors.rejectValue("age", null, "the age cannot under 18");
-        }
-        if (userDto.getPhoneNumber().equals("")) {
-            errors.rejectValue("phoneNumber", null, "this field cannot empty");
-        } else if (!userDto.getPhoneNumber().matches("^0[0-9]{9}$")) {
-            errors.rejectValue("phoneNumber", null, "the phone number invalid,phone number" +
-                    " start with 0 and total 10 number");
-        }
-        if (userDto.getFirstName().equals("")) {
-            errors.rejectValue("firstName", null, "this field cannot empty");
-        } else if (userDto.getFirstName().matches("^(?=.{5,45}$)[A-Za-z]{5,45}$")) {
-            errors.rejectValue("firstName", null, "the first name invalid,only alphabet" +
-                    " character and character iz 5, max iz 45");
-        }
-        if (userDto.getFirstName().equals("")) {
-            errors.rejectValue("lastName", null, "this field cannot empty");
-        } else if (userDto.getFirstName().matches("^(?=.{5,45}$)[A-Za-z]{5,45}$")) {
-            errors.rejectValue("lastName", null, "the last name invalid,only alphabet" +
-                    " character and character iz 5, max iz 45");
-        }
-        if (userDto.getEmail().equals("")) {
-            errors.rejectValue("email", null, "this field cannot empty");
-        } else if (!userDto.getEmail().matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
-            errors.rejectValue("email", null, "Email invalid, example :example@example.com");
         }
     }
 }

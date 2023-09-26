@@ -1,7 +1,7 @@
 package com.example.music.controller;
 
 import com.example.music.model.Song;
-import com.example.music.model.SongDto;
+import com.example.music.dto.SongDto;
 import com.example.music.service.ISongService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,7 +64,7 @@ public class SongController {
                        RedirectAttributes redirectAttributes) {
         new SongDto().validate(songDto, bindingResult);
         if (bindingResult.hasErrors()) {
-            return "edit";
+            return "/edit";
         } else {
             Song song = new Song();
             BeanUtils.copyProperties(songDto, song);

@@ -1,20 +1,23 @@
 package com.example.validate_form.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+@Column(columnDefinition = "int not null")
     private int id;
+    @Column(columnDefinition = "varchar(50) not null")
     private String firstName;
+    @Column(columnDefinition = "varchar(50) not null")
     private String lastName;
+
+    @Column(columnDefinition = "int not null")
     private int phoneNumber;
+    @Column(columnDefinition = "int not null")
     private int age;
+    @Column(columnDefinition = "varchar(50) not null")
     private String email;
 
     public User() {
