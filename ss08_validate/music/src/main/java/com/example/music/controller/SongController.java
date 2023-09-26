@@ -54,14 +54,12 @@ public class SongController {
     @GetMapping("/showEdit")
     public String showEdit(@RequestParam int id, Model model) {
         Song song = service.findById(id);
-        SongDto songDto = new SongDto();
-        BeanUtils.copyProperties(song,songDto);
-        model.addAttribute("editSong",songDto);
+        model.addAttribute("song", song);
         return "edit";
     }
 
     @PostMapping("/edit")
-    public String edit(@Valid @ModelAttribute("editSong") SongDto songDto,
+    public String edit(@Valid @ModelAttribute SongDto songDto,
                        BindingResult bindingResult,
                        RedirectAttributes redirectAttributes) {
         new SongDto().validate(songDto, bindingResult);
@@ -69,6 +67,7 @@ public class SongController {
             return "edit";
         } else {
             Song song = new Song();
+            BeanUtils.copyProperties(songDto, song);
             service.update(song);
             redirectAttributes.addFlashAttribute("message", "edit success");
             return "redirect:/";

@@ -54,7 +54,7 @@ e4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
                     <h5 class="card-title" th:text="${song.name}">Card title</h5>
                     <p class="card-text" th:text="${song.singer}"/>
                     <p class="card-text" th:text="${song.category}"/>
-                    <td><a th:href="@{/showEdit(id=${song.id})}">Update</a></td>
+                    <td><a th:href="@{/showEdit/(id=${song.id})}">Update</a></td>
                 </div>
             </div>
         </div>

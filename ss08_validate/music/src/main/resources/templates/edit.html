@@ -11,21 +11,21 @@
     <center>Edit Blog</center>
 </h2>
 <div class="container">
-    <form th:object="${editSong}" th:action="@{/edit}" method="post">
+    <form th:object="${song}" th:action="@{/edit}" method="post">
         <div class="mb-3">
             <input hidden="hidden" th:field="*{id}" type="text" class="form-control">
         </div>
         <div class="mb-3">
-            <label class="form-label">Title</label>
+            <label class="form-label">Name</label>
             <input th:field="*{name}" type="text" class="form-control">
         </div>
         <div class="mb-3">
-            <label class="form-label">Content</label>
+            <label class="form-label">Singer</label>
             <input th:field="*{singer}" type="text" class="form-control">
         </div>
         <div class="mb-3">
-            <label class="form-label">KOL name</label>
-            <input th:field="*{category}" type="number" class="form-control">
+            <label class="form-label">Category</label>
+            <input th:field="*{category}" type="text" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
