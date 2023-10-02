@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -25,9 +26,9 @@ public class ProductController {
         return "index";
     }
 
-    @GetMapping("/showDetail")
-    public String showDetail(@RequestParam(name = "id",required = false,defaultValue = "0")
-                                 int id, Model model) {
+    @GetMapping("/showDetail/{id}")
+    public String showDetail(@PathVariable(name = "id", required = false)
+                             int id, Model model) {
         Product product = service.findById(id);
         model.addAttribute("product", product);
         return "detail";
@@ -39,25 +40,30 @@ public class ProductController {
     }
 
     @GetMapping("/add")
-    public String addToCart(@RequestParam int id, @SessionAttribute(value = "cart", required = false) CartDto cartDto) {
+    public String addToCart(@RequestParam int id, @SessionAttribute(value = "cart") CartDto cartDto, RedirectAttributes redirectAttributes) {
         Product product = service.findById(id);
         if (product != null) {
             ProductDto productDto = new ProductDto();
             BeanUtils.copyProperties(product, productDto);
             cartDto.addProduct(productDto);
+        } else {
+            redirectAttributes.addFlashAttribute("message", "not found");
         }
         return "redirect:/cart";
     }
 
     @GetMapping("/delete")
-    public String deleteToCart(@RequestParam int id, @SessionAttribute(value = "cart", required = false) CartDto cartDto) {
+    public String deleteToCart(@RequestParam int id, @SessionAttribute(value = "cart") CartDto cartDto, RedirectAttributes redirectAttributes) {
         Product product = service.findById(id);
         if (product != null) {
             ProductDto productDto = new ProductDto();
             BeanUtils.copyProperties(product, productDto);
             cartDto.deleteProduct(productDto);
+        } else {
+            redirectAttributes.addFlashAttribute("message", "not found");
         }
         return "redirect:/cart";
     }
 
 }
+
